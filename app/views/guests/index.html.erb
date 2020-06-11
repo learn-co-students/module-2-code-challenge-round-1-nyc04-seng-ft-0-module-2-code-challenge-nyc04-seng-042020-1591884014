@@ -5,3 +5,11 @@
     <li><%= guest.name %></li>
   <% end %>
 </ul>
+
+<%= form_for @guests do |g| %>
+<%= g.label :name %>
+<%= g.text_field :episode %>
+
+<% g.submit %>
+
+<% end %>
