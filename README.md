@@ -23,6 +23,8 @@ The application keeps track of the guests that have appeared on the show.
 
 There are three models in the domain: Guest, Episode, and Appearance.
 
+Guest -< Appearance >- Episode
+
 Guests and Episodes have a many to many relationship through Appearances. A single Appearance belongs to one Guest and one Episode.
 
 ## What You Already Have
@@ -31,25 +33,25 @@ The starter code includes migrations, models, and seed data for Guests and Episo
 
 After running the setup instructions above, visiting `'/guests'` will display all of the guests, and visiting `'/episodes'` will display all of the episodes.
 
-***Schema***
+**_Schema_**
 
 Episodes
 
-| Column | Type |
-| ------------- | ------------- |
-| date  | Date  |
-| number  | Integer  |
-| created_at  | DateTime  |
-| updated_at  | DateTime  |
+| Column     | Type     |
+| ---------- | -------- |
+| date       | Date     |
+| number     | Integer  |
+| created_at | DateTime |
+| updated_at | DateTime |
 
 Guests
 
-| Column | Type |
-| ------------- | ------------- |
-| name  | String  |
-| occupation  | String  |
-| created_at  | DateTime  |
-| updated_at  | DateTime  |
+| Column     | Type     |
+| ---------- | -------- |
+| name       | String   |
+| occupation | String   |
+| created_at | DateTime |
+| updated_at | DateTime |
 
 ### Model Methods and Validations
 
@@ -64,9 +66,7 @@ Guests
 
 Update the code of the application to meet the following deliverables. Follow RESTful naming conventions and the MVC pattern to divide responsibility.
 
-***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
-
-
+**_Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially._**
 
 ### 1. Appearance Model
 
