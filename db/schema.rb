@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20200611160234) do
     t.integer "guest_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "rating"
     t.index ["episode_id"], name: "index_appearances_on_episode_id"
     t.index ["guest_id"], name: "index_appearances_on_guest_id"
   end
