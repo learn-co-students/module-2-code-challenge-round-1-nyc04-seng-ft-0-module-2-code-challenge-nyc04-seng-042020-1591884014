@@ -1,8 +1,3 @@
-class Episode < ApplicationRecord
-    has_many :appearances
-    has_many :guest through: :appearances
-end
-
 class Rating < ApplicationRecord
     belongs_to :episode
   validates_presence_of :episode 

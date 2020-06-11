@@ -1,0 +1,9 @@
+<%= form_for [:apperances, :ratings] do |f| %>
+<br>
+<%= f.collection_select( :guest_id, Guest.all, :id, :name) %>
+<br>
+<%= f.collection_select( :episode_id, Episode.all, :id, :name) %>
+<br>
+<%= f.select("rating", "value", (1..5))%>
+<%= f.submit "Rate this Episode"%>
+<% end %>
