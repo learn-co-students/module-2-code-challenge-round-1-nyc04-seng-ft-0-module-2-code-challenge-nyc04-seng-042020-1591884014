@@ -1,0 +1,10 @@
+<h1>A new Guest has Arrived!</h1>
+
+<%= form_for @appearance do |f| %>
+  Guests: <%= f.collection_select(:guest_id, @guests, :id, :name) %>
+  <br>
+  Episodes: <%= f.collection_select(:episode_id, @episodes, :id, :date) %>
+  <br>
+  Rating: <%= f.select :rating, (1..5) %>
+  <%= f.submit %>
+<% end %>
