@@ -1,0 +1,10 @@
+<%# On the episode show page, a user should see:
+
+Episode date
+A list of the guests who were on that episode
+Each guest's name should link to the Guest Show page %>
+
+<h2>Appearance </h2>
+<h2> rating : <%= @appearance.rating%></h2>
+<h2> guest : <%= @appearance.find_guest(@appearance.guest_id).name%></h2>
+<h2> date : <%= @appearance.find_episode(@appearance.episode_id).date%></h2>
