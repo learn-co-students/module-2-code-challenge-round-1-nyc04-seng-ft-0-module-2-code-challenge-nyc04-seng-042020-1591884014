@@ -1,0 +1,15 @@
+<h1>Appearance Form</h1>
+
+<%= form_for @appearance do |f| %>
+Episode:<%= collection_select(:appearance, :episode_id, Episode.all, :id, :date) %>
+
+Guest:<%= collection_select(:appearance, :guest_id, Guest.all, :id, :name) %>
+Rating:<%= f.number_field :rating %>
+<%= f.submit %>
+<% end %>
+
+<% if @errors%>
+    <% @errors.each do |error|%>
+        <p style="color:red"><%= error %></p>
+        <% end %>
+<% end %>
