@@ -6,7 +6,5 @@ class GuestsController < ApplicationController
 
   def show
     @guest = Guest.find(params[:id])
-    @appearances = @guest.appearances
-    @episodes = @guest.episodes
   end
 end
