@@ -1,0 +1,12 @@
+<h1>Show page for <%= @guest.name %></h1>
+
+<h2>Occupation: <%= @guest.occupation %></h2>
+
+<h3>Episodes:</h3>
+
+<ol>
+  <% @guest.episodes.each do |episode| %>
+    <%# byebug %>
+    <li><%= link_to episode.date,  episode_path(episode)%> <%= @guest.appearances.find_by(episode_id: episode.id).rating %></li>
+  <% end %>
+</ol>
