@@ -11,8 +11,9 @@ Each Episode date should link to the show page for that Episode. %>
 <h3>Guest list</h3>
 <ul>
 
-  <%@guest.episodes.each do |epi|%>
-    <p>Episode Number : <%= epi.number%> | Date :  <%=link_to epi.date, episode_path(epi)%></p>
-    <%# <p><%= epi.rating%>
+
+
+  <%@guest.appearances.each do |app|%>
+    <p>Episode Number : <%= app.episode.number%> | Date :  <%=link_to app.episode.date, episode_path(app.episode.id)%> | rating : <%= app.rating%></p>
   <%end%>
 </ul>
