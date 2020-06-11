@@ -1,0 +1,19 @@
+<h1>Guest Details</h1>
+
+<p><%= @guest.name %></p>
+<p><%= @guest.occupation %></p>
+<br>
+<h3>Episode Appearances</h3>
+<hr>
+
+<% @guest.episodes.each do |episode| %>
+    <p>Episode: <%= link_to episode.date, episode_path(episode) %></p>
+    <p>Appearance Rating: 
+    <% episode.appearances.each do |appearance| %>
+        <% if appearance.guest_id == @guest.id %>
+            <%= appearance.rating %>
+        <% end %>
+    <% end %>
+    </p>
+    <hr>
+<% end %>
