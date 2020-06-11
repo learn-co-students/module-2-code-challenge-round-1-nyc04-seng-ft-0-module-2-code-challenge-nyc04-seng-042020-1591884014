@@ -21,15 +21,16 @@ Before you begin coding your solution, clone this repo and then `cd` into it. Th
 
 The application keeps track of the guests that have appeared on the show.
 
-There are three models in the domain: Guest, Episode, and Appearance.
+<!-- There are three models in the domain: Guest, Episode, and Appearance.
 
-Guests and Episodes have a many to many relationship through Appearances. A single Appearance belongs to one Guest and one Episode.
+Guests and Episodes have a many to many relationship through Appearances. 
+A single Appearance belongs to one Guest and one Episode. -->
 
 ## What You Already Have
 
 The starter code includes migrations, models, and seed data for Guests and Episodes. There are also routes, controller actions, and views to support listing the guests and episodes.
 
-After running the setup instructions above, visiting `'/guests'` will display all of the guests, and visiting `'/episodes'` will display all of the episodes.
+<!-- After running the setup instructions above, visiting `'/guests'` will display all of the guests, and visiting `'/episodes'` will display all of the episodes. -->
 
 ***Schema***
 
@@ -80,10 +81,10 @@ To log that a specific Guest appeared on a certain Episode, we need to create th
 
 A user can fill out a form to create a new Appearance. They can:
 
-- Choose an existing guest from a select dropdown
+<!-- - Choose an existing guest from a select dropdown
 - Choose an existing episode from a select dropdown
 - Enter a numeric rating
-- Submit the form
+- Submit the form -->
 
 After submitting the form, the user should be redirected to the selected episode's show page.
 
@@ -91,7 +92,7 @@ After submitting the form, the user should be redirected to the selected episode
 
 On the episode show page, a user should see:
 
-- Episode date
+<!-- - Episode date -->
 - A list of the guests who were on that episode
 - Each guest's name should link to the Guest Show page
 
