@@ -8,8 +8,12 @@
 
 <% @guest.episodes.each do |episode| %>
     <p>Episode: <%= link_to episode.date, episode_path(episode) %></p>
-    <p>Appearance Rating: <%= episode.appearances.first.rating %></p>
+    <p>Appearance Rating: 
+    <% episode.appearances.each do |appearance| %>
+        <% if appearance.guest_id == @guest.id %>
+            <%= appearance.rating %>
+        <% end %>
+    <% end %>
+    </p>
     <hr>
 <% end %>
-
-
