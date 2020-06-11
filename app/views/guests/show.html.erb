@@ -1,0 +1,14 @@
+<h1>GUEST PAGE!!!!!!</h1>
+
+    <h2><%= @guest.name %></h2>
+    
+    <ul>
+        <% @guest.appearances.each do |g| %>
+        <li><%= link_to g.episode.date, episode_path(g.episode_id) %></li>
+        <li><%= g.rating%></li>
+
+        <% end %>
+    </ul>
+
+
+

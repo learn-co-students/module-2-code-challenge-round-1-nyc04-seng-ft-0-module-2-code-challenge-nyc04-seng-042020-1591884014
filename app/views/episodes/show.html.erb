@@ -1,0 +1,8 @@
+<h1>EPISODE PAGE!!!!!!</h1>
+
+    <h2><%= @episode.date%></h2>
+    <ul>
+        <% @episode.appearances.each do |ep| %>
+        <li><%= link_to ep.guest.name, guest_path(ep.guest_id) %></li>
+        <% end %>
+    </ul>
