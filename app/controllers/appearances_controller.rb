@@ -9,9 +9,9 @@ class AppearancesController < ApplicationController
 
 
     if @appearance.valid?
-      redirect_to episodes_path#(@appearance.episode)
+      redirect_to episode_path(@appearance.episode)
     else
-      flash[:errors] = "Incorrect Path"
+      flash[:errors] = "Incorrect Rating!"
       redirect_to new_appearance_path(@appearance) #(@appearance.episode)
     end
   end
