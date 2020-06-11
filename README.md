@@ -72,18 +72,20 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 To log that a specific Guest appeared on a certain Episode, we need to create the Appearance model. **Make the necessary updates to the schema and models** so that:
 
-- Guest can appear on many episodes
-- Episode can have multiple guests
-- Appearance stores a numeric rating
+- [x] Guest can appear on many episodes
+- [x] Episode can have multiple guests
+- [x] Appearance stores a numeric rating
 
 ### 2. New Appearance Form
 
 A user can fill out a form to create a new Appearance. They can:
 
-- Choose an existing guest from a select dropdown
-- Choose an existing episode from a select dropdown
-- Enter a numeric rating
-- Submit the form
+- [x] Choose an existing guest from a select dropdown
+- [x] Choose an existing episode from a select dropdown
+- [x] Enter a numeric rating
+- [x] Submit the form
+
+<!-- create doesn't work here yet -->
 
 After submitting the form, the user should be redirected to the selected episode's show page.
 
@@ -91,7 +93,7 @@ After submitting the form, the user should be redirected to the selected episode
 
 On the episode show page, a user should see:
 
-- Episode date
+- [x] Episode date
 - A list of the guests who were on that episode
 - Each guest's name should link to the Guest Show page
 
