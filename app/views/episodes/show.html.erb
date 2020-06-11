@@ -1,0 +1,13 @@
+<h1>Episode</h1>
+
+<!-- - A list of the guests who were on that episode -->
+<!-- - Each guest's name should link to the Guest Show page -->
+<h2><%= @episode.date.strftime("%B %d, %Y") %></h2>
+<table>
+  <tr>
+    <th>Guests</th>
+  </tr>
+  <%= @episode.guests.each do |g| %>
+    <tr><%= g.name %></tr>
+  <% end %>
+</table>
