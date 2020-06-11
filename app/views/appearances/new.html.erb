@@ -1,0 +1,23 @@
+<h1>Form to create new Appearance</h1>
+
+<% if @errors %>
+  <% @errors.each do |error|%>
+    <p><%= error %></p>
+  <%end%>
+<%end%>
+
+<%= form_for @appearance do |f| %>
+  <%= f.label :guest_id %>:
+  <%= collection_select(:appearance, :guest_id, Guest.all, :id, :name) %>
+  <br>
+  <br>
+  <%= f.label :episode_id %>:
+  <%= collection_select(:appearance, :episode_id, Episode.all, :id, :date) %>
+  <br>
+  <br>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <br>
+  <br>
+  <%= f.submit %>
+<% end %>

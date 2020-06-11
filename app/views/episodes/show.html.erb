@@ -1,0 +1,13 @@
+<h1>Show page for episode <%= @episode.number %></h1>
+
+<%# byebug%>
+<h2>Date: <%= "#{@episode.date.strftime("%B %d, %Y")}" %></h2>
+
+<h3>Guests:</h3>
+
+<ol>
+  <% @episode.guests.each do |guest| %>
+    <li><%= link_to guest.name,  guest_path(guest)%></li>
+  <% end %>
+</ol>
+
