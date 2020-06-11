@@ -1,0 +1,18 @@
+<h1><%= @guest.name %></h1>
+
+<h2>Episodes Appeared In:</h2>
+<br>
+
+
+<h1>List of Episodes (unordered)</h1>
+<% @guest.episodes.each do |episode| %>
+    <div><%=link_to episode.date, episode_path(episode) %> | <%= @guest.appearance_rating(episode)%></div>
+<% end %>
+
+<br>
+<br>
+<h1>List Of Episodes (Ordered to meet deliverble # 8)</h1>
+
+<% @guest.sorted_episodes.each do |episode| %>
+    <div><%=link_to episode.date, episode_path(episode) %> | <%= @guest.appearance_rating(episode)%></div>
+<% end %>
