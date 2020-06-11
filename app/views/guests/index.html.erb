@@ -5,3 +5,9 @@
     <li><%= guest.name %></li>
   <% end %>
 </ul>
+
+
+<% @guests.each do |episode| %>
+    <li><%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")} - #{episode.rating}" %></li>
+ <%= link_to "Appeaarances", Episode.id , episode_path(episode) %>
+  <% end %>
