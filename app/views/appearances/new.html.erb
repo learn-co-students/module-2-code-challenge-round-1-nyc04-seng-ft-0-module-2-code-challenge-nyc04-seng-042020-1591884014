@@ -1,0 +1,13 @@
+<h1>Appearance New Form</h1>
+
+<select name="guest_id">
+ <%= @guests.each do |guest| %>
+  <option value="<%= guest.id %>"><%= guest.name%></option>
+  <% end %>
+
+
+
+  <select name="episode_id">
+ <%= @episodes.each do |episode| %>
+  <option value="<%= episode.id%>"><%= episode.date%></option>
+   <%end%>
