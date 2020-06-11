@@ -1,0 +1,16 @@
+<h1><%= @guest.name %></h1>
+
+
+<br>
+
+
+<ul>
+    <%= @guest.episodes.each do |episode|%>
+    <li>
+        <ul>
+            <li>Date: <%= episode.date%></li>
+            <li>Rating: <%= episode.rating%></li>
+        </ul>
+    </li>
+    <%end%>
+</ul>
