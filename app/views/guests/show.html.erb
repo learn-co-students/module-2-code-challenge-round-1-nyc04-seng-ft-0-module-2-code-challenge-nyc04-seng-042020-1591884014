@@ -1,0 +1,16 @@
+<%# On the Guest show page, add a list of the Episodes the Guest has appeared on.
+
+For each Episode, show the:
+
+date of the Episode
+rating for the Appearance
+Each Episode date should link to the show page for that Episode. %>
+
+<h2>Guest name : <%= @guest.name%></h2>
+
+<h3>Guest list</h3>
+<ul>
+  <%@guest.appearances.order(rating: :desc).each do |app|%>
+    <p>Episode Number : <%= app.episode.number%> | Date :  <%=link_to app.episode.date, episode_path(app.episode.id)%> | rating : <%= app.rating%></p>
+  <%end%>
+</ul>

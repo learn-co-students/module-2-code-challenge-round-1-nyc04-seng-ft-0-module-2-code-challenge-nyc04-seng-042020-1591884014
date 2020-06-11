@@ -1,0 +1,23 @@
+<%# A user can fill out a form to create a new Appearance. They can:
+
+Choose an existing guest from a select dropdown
+Choose an existing episode from a select dropdown
+Enter a numeric rating
+Submit the form
+After submitting the form, the user should be redirected to the selected episode's show page. %>
+
+
+<%=form_for @appearance do |f|%>
+  <h3>Guest : <%= f.collection_select( :guest_id, @guests, :id, :name) %></h3>
+  <h3>Episode : <%= f.collection_select( :episode_id, @episodes, :id, :date) %></h3>
+  <h3>Rating : <%= f.number_field( :rating, in: 1..5, step: 1) %></h3>
+  <%= f.submit%>
+<%end%>
+
+<% if flash[:error_msg]%>
+  <ul>
+    <% flash[:error_msg].each do |type, msg|%>
+      <p><%= msg %></p>
+    <%end%>
+  </ul>
+<%end%>
