@@ -1,0 +1,15 @@
+<h1>New Appearance Form</h1><br><br>
+
+<% if @errors %>
+   <p> <%= @errors %> </p><br>
+<% end %>
+
+<%= form_for @appearance do |f| %>
+    <%= f.label(:guest_id, "Guest") %><br>
+    <%= f.collection_select(:guest_id, @guests, :id, :name) %><br>
+    <%= f.label(:episode_id, "Episode") %><br>
+    <%= f.collection_select(:episode_id, @episodes, :id, :date) %><br>
+    <%= f.label(:rating, "Rating") %><br>
+    <%= f.number_field(:rating) %><br>
+    <%= f.submit("Submit Appearance") %>
+<% end %>    

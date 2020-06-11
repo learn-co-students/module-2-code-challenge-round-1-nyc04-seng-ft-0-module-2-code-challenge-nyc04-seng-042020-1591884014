@@ -1,0 +1,7 @@
+<h1>Guest</h1>
+<hr><br>
+
+<h3><%= @guest.name %></h3><br>
+<% @guest.episodes.each do |episode| %>
+    <%= link_to(episode.date, episode_path(episode)) %> | <%= episode.appearances.where("guest_id = #{@guest.id}").first.rating %><br>
+<% end %>
