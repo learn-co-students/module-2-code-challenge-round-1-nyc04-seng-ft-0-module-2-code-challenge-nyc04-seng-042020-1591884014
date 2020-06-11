@@ -1,5 +1,10 @@
 <h1><%= @episode.date %></h1>
 <% if @episode.guests.count > 0 %>
+
+<h2>Average Rating:
+<%= @episode.appearances.average(:rating).round(1) %>
+</h2>
+
 <h3>Appearances:</h3>
     <% @episode.guests.each do |guest| %>
         <li>
@@ -9,6 +14,6 @@
 
 <% else %>
 
-    <%= "No Appearances yet, create one!" %>
+    <p>No Appearances yet, <%= link_to "create one!", new_appearance_path %>
 
 <% end %>
