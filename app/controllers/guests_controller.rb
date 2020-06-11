@@ -4,7 +4,7 @@ class GuestsController < ApplicationController
     @guests = Guest.all
   end
 
-  def  show
+  def show
     @guest = Guest.find(params[:id])
   end
 end
