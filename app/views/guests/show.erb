@@ -1,0 +1,13 @@
+<%= @guest.name %>
+
+<% @guest.episodes.each do |episode|%>
+    <%= link_to episode.date, episode_path(episode) %>
+    <% episode.appearances.each do |appearance|  %>
+        <% if appearance.guest_id == @guest.id %>
+            <%= appearance.rating %>
+        <%end%>
+    <% end %>
+<% end %>
+
+
+
