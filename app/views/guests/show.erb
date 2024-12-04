@@ -1,0 +1,6 @@
+<% @guest.episodes.each do |episode| %>
+ <% appearance = Appearance.find_by({guest_id: @guest.id, episode_id: episode.id}) %>
+    <div>Episode Date: <%= link_to episode.date, episode_path(episode) %> | Rating: <%= appearance.rating %></div>
+
+<% end %>
+
